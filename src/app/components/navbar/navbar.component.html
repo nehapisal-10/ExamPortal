@@ -1,0 +1,42 @@
+<mat-toolbar class="nav">
+    <a 
+    routerLink="/" 
+    mat-icon-button
+    class="example-icon" class="color-me" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu_book</mat-icon>
+    </a>
+
+    <span class="color-me">ONLINE EXAMINATION PORTAL</span>
+    <span class="example-spacer"></span>
+
+    <a 
+    *ngIf="!isLoggedIn"
+    [routerLink]="'/login'" 
+    mat-icon-button
+     class="example-icon favorite-icon" class="color-me">
+      Login
+    </a>
+    
+    <a 
+    *ngIf="!isLoggedIn"
+    [routerLink]="'/signup'" 
+    mat-icon-button
+    class="example-icon favorite-icon mr60 ml40" style="color:#ffffff">
+      Register
+    </a>
+
+    <a 
+    (click)="logout()"
+    *ngIf="isLoggedIn"
+    mat-icon-button
+    class="example-icon favorite-icon mr60 ml40" style="color:#ffffff">
+      Logout
+    </a>
+
+    <a 
+    *ngIf="isLoggedIn && user"
+    mat-icon-button
+    class="example-icon favorite-icon mr60 ml40" style="color:#ffffff">
+      {{ user.username }}
+    </a>
+</mat-toolbar>
