@@ -1,0 +1,28 @@
+
+.list-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .category-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .category-info mat-icon {
+    margin-right: 20px; /* Space between icon and text */
+  }
+  
+  .delete-icon {
+    cursor: pointer;
+    color: rgb(5, 5, 5); /* Color of the delete icon */
+  }
+
+  .edit-icon{
+    position: absolute;
+    right: 6%;
+    color: black;
+  }
+  

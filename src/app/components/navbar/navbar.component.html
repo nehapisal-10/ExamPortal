@@ -13,7 +13,7 @@
     *ngIf="!isLoggedIn"
     [routerLink]="'/login'" 
     mat-icon-button
-     class="example-icon favorite-icon" class="color-me">
+     class="example-icon favorite-icon"  style="color:#ffffff; font-size: 20px;">
       Login
     </a>
     
@@ -21,22 +21,23 @@
     *ngIf="!isLoggedIn"
     [routerLink]="'/signup'" 
     mat-icon-button
-    class="example-icon favorite-icon mr60 ml40" style="color:#ffffff">
+    class="example-icon favorite-icon mr60 ml40" style="color:#ffffff; font-size: 20px;">
       Register
     </a>
-
+    <a 
+    *ngIf="isLoggedIn && user"
+    mat-icon-button
+    routerLink="/admin/profile"
+    class="example-icon favorite-icon mr60 ml20" style="color:#ffffff ; font-size: 20px;">
+      {{ user.firstName }}{{user.lastName}}
+    </a>
     <a 
     (click)="logout()"
     *ngIf="isLoggedIn"
     mat-icon-button
-    class="example-icon favorite-icon mr60 ml40" style="color:#ffffff">
+    class="example-icon favorite-icon mr60 ml40" style="color:#ffffff; font-size: 20px;">
       Logout
     </a>
 
-    <a 
-    *ngIf="isLoggedIn && user"
-    mat-icon-button
-    class="example-icon favorite-icon mr60 ml40" style="color:#ffffff">
-      {{ user.username }}
-    </a>
+    
 </mat-toolbar>

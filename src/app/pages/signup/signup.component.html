@@ -2,7 +2,7 @@
 
     <div class="container">
 
-        <div class="row" style="margin-top: 20px ;">
+        <div class="row" style="margin-top: 10px ;">
 
             <div class="col-md-6 offset-md-3">
 
@@ -10,7 +10,7 @@
                     <img src="../../../assets/login-icon.png" alt="" class="login">
                 </div>
 
-                <h1 class="text-center">Register here!!</h1>
+                <h1 class="text-center">Register</h1>
 
                 <form (ngSubmit)="formSubmit()">
                     <!--Username-->
@@ -22,7 +22,6 @@
                          name="username"
                          matInput
                          placeholder="username"/>
-                         <mat-hint>username must be unique</mat-hint>
                       </mat-form-field>
 
                     <!--Password-->
@@ -38,38 +37,60 @@
 
                     <!--firstName-->
                     <mat-form-field class="full-width" appearance="outline">
-                        <mat-label>FirstName</mat-label>
+                        <mat-label>First Name</mat-label>
                         <input
                         required
                         [(ngModel)]="user.firstName"
                         name="firstName"
-                        matInput placeholder="firstname"/>
+                        matInput placeholder="First Name"/>
                       </mat-form-field>
 
                     <!--lastName-->
                     <mat-form-field class="full-width" appearance="outline">
-                        <mat-label>LastName</mat-label>
+                        <mat-label>Last Name</mat-label>
                         <input
                         required
                         [(ngModel)]="user.lastName"
                         name="lastName"
-                        matInput placeholder="lastname"/>
+                        matInput placeholder="Last Name"/>
                       </mat-form-field>
 
                     <!--email-->
                     <mat-form-field class="full-width" appearance="outline">
-                        <mat-label>EmailId</mat-label>
+                        <mat-label>Email Id</mat-label>
                         <input 
                         required
                         [(ngModel)]="user.email"
                         name="email"
-                        type="email" matInput placeholder="email"/>
+                        type="email"
+                        matInput
+                        placeholder="Email Id"
+                        #email="ngModel"
+                        />
+                        <!--email validation-->
+                        <mat-error *ngIf="email.invalid && email.touched">
+                            <span *ngIf="email.errors?.['required']">Email is required.</span>
+                            <span *ngIf="email.errors?.['email']">Please enter a valid email address.</span>
+                          </mat-error>
                       </mat-form-field>  
 
-                    <div class="container text-center">
-                        <button type="submit" mat-raised-button color="green">Register</button>
-                        <button type="reset" style="margin-left: 20px;" mat-raised-button color="green">Clear</button>
+                      <div class="container text-center">
+                        <button type="submit" mat-raised-button class="button-color">Register</button>
+                        <button type="reset" mat-raised-button class="button-color" style="margin-left: 20px;">Clear</button>
                     </div>
+
+                    <div class="container text-center mb20" style="margin-top: 15px;">
+                        <span>Already have an account? <a routerLink="/login">Login</a></span>
+                    </div>
+                    <!-- <div id="g_id_onload"
+                        data-client_id="620137301404-i3b1smrh5jkqmarq8lpihvastu5jbhh6.apps.googleusercontent.com"
+                        data-context="signin" data-ux_mode="popup" data-callback="handleCredentialManager"
+                        data-auto_prompt="false">
+                    </div>
+
+                    <div class="g_id_signin" data-type="standard" data-shape="pill" data-theme="outline"
+                        data-text="signin_with" data-size="large" data-logo_alignment="left">
+                    </div> -->
 
                 </form>
 

@@ -8,8 +8,8 @@ export const adminGuard: CanActivateFn = (route, state) => {
 
   if (login.isLoggedIn() && login.getUserRole() == 'ADMIN') {
     return true;
-  } else {
-    router.navigate(['admin']); // Redirect to an admin page or login page
+  } 
+    router.navigate(['login']); // Redirect to an admin page or login page
     return false;
-  }
-};
+  
+}

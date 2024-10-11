@@ -1,0 +1,49 @@
+<h1 class="ml20 mt20">Question of {{qTitle}}</h1>
+<div class="bootstrap-wrapper">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="container text-center">
+                <button mat-raised-button [routerLink]="'/admin/add-question/'+ qId + '/' + qTitle" class="button-color">
+                    Add Questions
+                </button>
+            </div>
+            <mat-card *ngFor="let q of questions; let i = index" class="mt20">
+                <mat-card-content>
+                    <p>
+                        <b>Q{{i+1}}</b> <span class="ml10" [innerHTML]="q.content"></span>
+                    </p>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p><b>1)</b><span class="ml10">{{q.option1}}</span></p>
+                            </div>
+                            <div class="col-md-6">
+                                <p><b>2)</b><span class="ml10">{{q.option2}}</span></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p><b>3)</b><span class="ml10">{{q.option3}}</span></p>
+                            </div>
+                            <div class="col-md-6">
+                                <p><b>4)</b><span class="ml10">{{q.option4}}</span></p>
+                            </div>
+                        </div>
+                        <mat-divider>
+                            <p class="mt20"><b>Correct Answer:</b> {{q.answer}}</p>
+                        </mat-divider>
+                    </div>
+                </mat-card-content>
+                <mat-card-actions class="text-center">
+                    <div>
+                    <button mat-raised-button class="button-color ml510" (click)="deleteQuestion(q.qId)">Delete</button>
+                    </div>
+                    <div>
+                        <!-- <button mat-raised-button class="button-color ml20" [routerLink]="'/admin/question/' + q.qId" >Update</button> -->
+                        <button mat-raised-button class="button-color ml20" (click)="updateQuestion(q.qId,qId,qTitle)" >Update</button>
+                    </div>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+</div>

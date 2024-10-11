@@ -1,0 +1,12 @@
+.w100{
+    width: 100%;
+}
+.question-output {
+    white-space: pre-wrap; /* Preserves line breaks and wraps text */
+    word-wrap: break-word; /* Wraps long words */
+    max-height: 300px;     /* Optional: Set a maximum height for the output */
+    overflow-y: auto;      /* Adds a scrollbar if the content exceeds the max-height */
+    border: 1px solid #ccc; /* Optional: Add a border for better visual separation */
+    padding: 10px;         /* Optional: Add padding for readability */
+    margin-top: 20px;      /* Optional: Add some space above the output */
+  }

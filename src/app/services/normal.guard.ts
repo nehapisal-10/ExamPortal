@@ -8,8 +8,7 @@ export const normalGuard: CanActivateFn = (route, state) => {
 
   if (login.isLoggedIn() && login.getUserRole() == 'NORMAL') {
     return true;
-  } else {
-    router.navigate(['user-dashboard']); // Redirect to an user page or login page
+  } 
+    router.navigate(['login']); // Redirect to an user page or login page
     return false;
-  }
-};
+}

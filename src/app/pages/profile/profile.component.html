@@ -1,1 +1,44 @@
-<p>Welcome to your profile!</p>
+<mat-card>
+    <h1 class="ml20 mt20">Your Profile details</h1>
+    <mat-card-content>
+        <div class="bootstrap-wrapper">
+            <div class="container">
+
+                <div class="container text-center">
+                    <img src="https://static-00.iconduck.com/assets.00/profile-default-icon-2048x2045-u3j7s5nj.png"
+                        alt="" class="profile-image" />
+                    <h1 class="mt20">{{user.firstName}} {{user.lastName}}</h1>
+                </div>
+                <div class="row">
+
+                    <div class="col-md-10 offset-md-1">
+                        <table class="table text-center mb20">
+                            <tr>
+                                <td>Username</td>
+                                <td>{{user.username}}</td>
+                            </tr>
+                            <tr>
+                                <td>UserId</td>
+                                <td>{{user.userId}}</td>
+                            </tr>
+                            <tr>
+                                <td>Role</td>
+                                <td>{{user.authorities[0].authority}}</td>
+                            </tr>
+                            <tr>
+                                <td>Status</td>
+                                <td>{{user.enabled?"ACTIVE":"Not Active"}}</td>
+                            </tr>
+                            <!-- Add more rows as needed -->
+                        </table>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </mat-card-content>
+    <!-- <mat-card-actions class="button-container">
+        <button mat-raised-button>UPDATE</button>
+      </mat-card-actions> -->
+</mat-card>

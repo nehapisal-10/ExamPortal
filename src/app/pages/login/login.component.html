@@ -8,37 +8,32 @@
                 <div class="container text-center">
                     <img src="../../../assets/login-icon.png" alt="" class="login">
                 </div>
-                    
-                <h1 class="text-center">Login here!!</h1>
+
+                <h1 class="text-center">Login</h1>
 
                 <form (ngSubmit)="formSubmit()">
                     <!--Username-->
                     <mat-form-field class="full-width" appearance="outline">
                         <mat-label>Username</mat-label>
-                        <input 
-                        [(ngModel)]="loginData.username"
-                        name="username"
-                        required matInput placeholder="username"/>
-                        <mat-hint>Valid username</mat-hint>
+                        <input [(ngModel)]="loginData.username" name="username" required matInput
+                            placeholder="Enter username" />
                     </mat-form-field>
 
-                     <!--Password-->
-                     <mat-form-field class="full-width" appearance="outline">
+                    <!--Password-->
+                    <mat-form-field class="full-width" appearance="outline">
                         <mat-label>Password</mat-label>
-                        <input
-                        [(ngModel)]="loginData.password"
-                        name="password"
-                        required matInput placeholder="password"/>
+                        <input type="password" [(ngModel)]="loginData.password" name="password" required matInput
+                            placeholder="Enter password" />
                     </mat-form-field>
 
-                    <div class="container text-center">
-                        <button type="submit" mat-raised-button color="green">
-                            Login
-                        </button>
-                        <button type="reset" class="ml20" mat-raised-button color="green">
-                            Reset
-                        </button>
+                    <div class="container text-center mt20">
+
+                        <button type="submit" mat-raised-button class="button-color">Login</button>
+
+                        <button type="reset" mat-raised-button class="button-color"
+                            style="margin-left: 20px;">Clear</button>
                     </div>
+                    
                 </form>
             </div>
         </div>

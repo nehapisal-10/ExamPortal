@@ -1,8 +1,26 @@
 <mat-card>
     <mat-action-list>
         <div mat-subheader>Menu</div>
-        <button mat-list-item><mat-icon mat-list-icon>home</mat-icon><span class="side-nav-head">Home</span></button>
+        <button mat-list-item routerLink="/admin">
+            <mat-icon mat-list-icon>home</mat-icon><span class="side-nav-head">Home</span>
+        </button>
         <button mat-list-item  routerLink="/admin/profile">
-            <mat-icon mat-list-icon>account_circle</mat-icon><span class="side-nav-head">Profile</span></button>
+            <mat-icon mat-list-icon>account_circle</mat-icon><span class="side-nav-head">Profile</span>
+        </button>
+        <button mat-list-item  routerLink="/admin/categories">
+            <mat-icon mat-list-icon>list</mat-icon><span class="side-nav-head">Categories</span>
+        </button>
+        <button mat-list-item  routerLink="/admin/add-category">
+            <mat-icon mat-list-icon>add_circle_icon</mat-icon><span class="side-nav-head">Add Category</span>
+        </button>
+        <button mat-list-item  routerLink="/admin/view-quizzes">
+            <mat-icon mat-list-icon>quiz</mat-icon><span class="side-nav-head">Quizzes</span>
+        </button>
+        <button mat-list-item  routerLink="/admin/add-quiz">
+            <mat-icon mat-list-icon>add</mat-icon><span class="side-nav-head">Add Quizzes</span>
+        </button>
+        <button mat-list-item  routerLink="/login">
+            <mat-icon mat-list-icon>logout</mat-icon><span class="side-nav-head">Logout</span>
+        </button>
     </mat-action-list>
 </mat-card>

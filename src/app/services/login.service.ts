@@ -23,7 +23,7 @@ export class LoginService {
   //Login user: set token in local storage
   public loginUser(token:any){
     localStorage.setItem('token',token);
-   // this.loginStatusSubject.next(true);
+    //this.loginStatusSubject.next(true);
     return true;
   }
 

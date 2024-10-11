@@ -55,24 +55,23 @@ export class LoginComponent implements OnInit{
 
                 //admin dashboardn'
                 window.location.href= '/admin'
-                 this.router.navigate(['admin']);
+                // this.router.navigate(['admin']);
                  this.loginStatusSubject.next(true);
-                location.reload();
+               // location.reload();
 
               } else if(this.login.getUserRole()=="NORMAL"){
 
                 //user dashboard
-                window.location.href= '/user-dashboard'
-                 this.router.navigate(['user-dashboard']);
-                 this.loginStatusSubject.next(true);
-                location.reload();
+                window.location.href= '/user-dashboard/0'
+                // this.router.navigate(['user-dashboard/0']);
+                this.loginStatusSubject.next(true);
+                // location.reload();
 
 
               }else {
 
                 //stay on login page
                 this.login.logout();
-
               }
             });
         },

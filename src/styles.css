@@ -8,6 +8,16 @@ background-color: #92D4DE; }
     text-align: center;
 }
 
+.ml10{
+    margin-left: 10px !important;
+}
+.mt10{
+    margin-top: 10px !important;
+}
+.mb10{
+    margin-bottom: 10px !important;
+}
+
 .ml20{
     margin-left: 20px !important;
 }
@@ -26,6 +36,40 @@ background-color: #92D4DE; }
 .mr40{
     margin-right: 40px !important;
 }
+.mt60{
+    margin-top: 60px !important;
+}
 .mr60{
     margin-right: 60px !important;
+}
+.ml460{
+    margin-left: 460px !important;
+}
+.ml510{
+    margin-left: 510px !important;
+}
+.mr100{
+    margin-right: 100px !important;
+}
+.button-container {
+    display: flex;
+    justify-content: center; /* Center-align buttons horizontally */
+    gap: 10px; /* Space between buttons */
+    margin-top: 20px; /* Space above the buttons */
+    margin-bottom: 40px;
+}
+.button-color {
+    background-color: #0e92a0 !important;
+    color: white !important; /* Optional: changes the text color to white for better contrast */
+    border: none; /* Optional: removes any default border */
+}
+.title{
+    .title {
+        font-size: 2em;
+        margin-bottom: 20px;
+        color: #333333;
+        text-align: center;
+        /* Apply the text-bold class to make the title bold */
+        font-weight: bold;
+    }
 }

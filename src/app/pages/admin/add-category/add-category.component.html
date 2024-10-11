@@ -1,0 +1,18 @@
+<mat-card>
+    <h1 class="ml20 mt20">Add Category</h1>
+    <mat-card-content>
+        <form (ngSubmit)="formSubmit()">
+            <mat-form-field class="w100" appearance="outline">
+                <mat-label>Title</mat-label>
+                <input required imput="text" name="title" matInput placeholder="Enter title" [(ngModel)]="category.title"/>
+            </mat-form-field>
+            <mat-form-field class="w100" appearance="outline">
+                <mat-label>Description</mat-label>
+                <input type="text" name="description" matInput placeholder="Enter description" [(ngModel)]="category.description"/>
+            </mat-form-field>
+    <div class="button-container">
+        <button mat-raised-button class="button-color">Add</button>
+    </div>
+</form>
+</mat-card-content> 
+</mat-card>
